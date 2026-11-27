@@ -1,6 +1,7 @@
 "use strict";
 const journey=window.NESMA_JOURNEY||[];
-let journeyState=load("nesma-project-v1",{});
+let journeyState={};
+function initJourney(){journeyState=load("nesma-project-v1",{});}
 const termsIndex=new Map((window.NESMA_CURRICULUM||[]).flatMap(m=>m.terms.map(t=>[t[0].toLowerCase(),t])));
 const stepDone=(id,i)=>!!journeyState[id+"-"+i];
 const stageDone=m=>m.steps.every((_,i)=>stepDone(m.id,i));
