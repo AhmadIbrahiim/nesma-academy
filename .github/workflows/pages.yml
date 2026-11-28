@@ -33,8 +33,9 @@ jobs:
           node --check research-data.js
           node --check research.js
           node --check portal.js
+          node --check benchmark.js
           mkdir -p _site
-          cp index.html style.css lessons.js app.js curriculum.js academy.js journey-data.js journey.js research-data.js research.js portal.js _site/
+          cp index.html style.css lessons.js app.js curriculum.js academy.js journey-data.js journey.js research-data.js research.js portal.js benchmark.js _site/
           if [ -d assets ]; then cp -r assets _site/; fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
